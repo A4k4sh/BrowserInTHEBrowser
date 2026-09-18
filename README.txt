@@ -33,11 +33,12 @@ docker run -d \
 Command for Hide Panel 
 docker exec firefox-kiosk sed -i 's/<\/head>/<style>#noVNC_control_bar, #noVNC_control_bar_handle, .noVNC_panel { display: none !important; }<\/style><\/head>/' /opt/noVNC/index.html
 
-iptables -I DOCKER-USER ! -i lo -p tcp --dport 5800 -j DROP
+This command for Blocking Victim 
+iptables -I DOCKER-USER ! -i lo -p tcp --dport 5800 -j DROP //Linux Firewall coammand
 
-ssh -L 8080:localhost:80 root@192.168.1.14
+ssh -L 8080:localhost:80 root@192.168.1.14 //use for Port forwarding command
 
-shortcut key = alt + shift + O or K = for logs
+shortcut key = alt + shift + O or K = for logs // to check key logs 
 --------------------------------------------------------------------------------------
 
 
